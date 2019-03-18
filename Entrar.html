@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Entrar</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="Cadastro.js"></script>
+     <link href="formulario.css" rel="stylesheet">
+    <style>
+       body.corpo{
+/*            background-color: LightGray;*/
+           background: LightGray url(img/grafico.png);
+           background-repeat: no-repeat;
+           background-attachment: fixed;
+           background-position: bottom right;
+           background-size: 300px 300px;
+           
+  
+/*           background-image: url(img/grafico.png)*/
+        }
+       
+      
+    </style>
+</head>
+<body class="corpo">
+	
+	<!--MENU-->
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+       <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span> 
+        </button>
+           <!-- INSERI LOGO -->
+        <a class="navbar-brand" href="index.html">Início</a>
+       </div>
+       <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+             
+             <li><a href="Gerenciamento.html">Sobre</a></li>
+          </ul>
+         <ul class="nav navbar-nav navbar-right">
+             <li><a href="Cadastro.html"><span class="glyphicon glyphicon-user"></span>Cadastra-se</a></li>
+             <li><a href="#"><span class="glyphicon glyphicon-log-in"></span>Entrar</a></li>
+         </ul>
+       </div>
+     </div>
+    </nav>
+    
+    <!--LOGIN-->
+    <center>
+    
+    <form class="form-signin" name="forlog">
+  
+   <h2 class="cabecalho">Acessar questionário</h2>
+  <label for="inputEmail" >Email</label>
+  <input type="email" id="inputEmail" class="form-control" placeholder="Digite seu email" required />
+  <label for="inputPassword" >Senha</label>
+  <input type="password" id="inputPassword" class="form-control" placeholder="************" required/>
+  <div class="checkbox mb-3">
+    <label>
+      <input type="checkbox" value="remember-me"> Lembra de mim
+    </label>
+  </div>
+  <button class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
+  <p class="mt-5 mb-3 text-muted">&copy; 2019</p>
+</form>
+</center>
+  </body>
+
+</html>

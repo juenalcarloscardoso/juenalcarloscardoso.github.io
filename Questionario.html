@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    
+    <!--    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+     -->
+    <script type="text/javascript" src="cheque.js"></script>
+    <style>
+    .accordion {
+      background-color: #eee;
+      color: #444;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 15px;
+      transition: 0.4s;
+    }
+
+    .active, .accordion:hover {
+      background-color: #ccc;
+    }
+
+    .accordion:after {
+      content: '\002B';
+      color: #777;
+      font-weight: bold;
+      float: right;
+      margin-left: 5px;
+    }
+
+    .active:after {
+      content: "\2212";
+    }
+
+    .panel {
+      padding: 0 18px;
+      background-color: white;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+    }
+        body.corpo{
+            background: LightGray url(img/grafico.png);
+           background-repeat: no-repeat;
+           background-attachment: fixed;
+           background-position: bottom right;
+           background-size: 300px 300px;
+           
+        }
+        h4.titulo{
+            color: darkcyan;
+        }
+        h2.tituloQuestao{
+            color: darkcyan;
+        }
+    </style>
+    </head>
+    <body class="corpo">
+    
+     <!-- MENU -->   
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+       <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span> 
+        </button>
+           <!-- INSERI LOGO -->
+        <a class="navbar-brand" href="index.html">Início</a>
+       </div>
+       <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+             
+             <li><a href="Gerenciamento.html">Sobre</a></li>
+          </ul>
+         <ul class="nav navbar-nav navbar-right">
+             <li><a href="Cadastro.html"><span class="glyphicon glyphicon-user"></span>Cadastra-se</a></li>
+             <li><a href="Entrar.html"><span class="glyphicon glyphicon-log-in"></span>Entrar</a></li>
+         </ul>
+       </div>
+     </div>
+    </nav>
+    
+        
+        
+    
+    <center> <h4 class="titulo">SIGNIFICADOS DA PONTUAÇÃO</h4></center>
+    <hr/>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Pontuação</th>
+          <th scope="col">Opção</th>
+
+        </tr>
+      </thead>
+      <tbody>
+    <tr>
+      <th scope="row">+3</th>
+      <td>Concordo inteiramente</td>
+      
+    </tr>
+    <tr>
+      <th scope="row">+2</th>
+      <td>Concordo</td>
+      
+    </tr>
+    <tr>
+      <th scope="row">+1</th>
+    
+      <td>Concordo parcialmente</td>
+    </tr>
+    <tr>
+     <th scope="row">0</th>
+        <td>Estou em duvida</td>
+    </tr>
+    <tr>
+     <th scope="row">-1</th>
+        <td>Discordo parcialmente</td>
+    </tr>
+    <tr>
+    <th scope="row">+1</th>
+        <td>Concordo parcialmente</td>
+    </tr>
+    <tr>
+    <th scope="row">-2</th>
+        <td>Discordo</td>
+    </tr>
+    <tr>
+    <th scope="row">-3</th>
+        <td>Discordo inteiramente</td>
+    </tr>
+  </tbody>
+</table>
+<hr/>
+
+    <center><h2 class="tituloQuestao">Questionário</h2></center>
+
+    <button class="accordion">Questão 1</button>
+    <div class="panel">
+      <p>Dá gratificação em dinheiro para o trabalho bem feito?</p>
+       <form name="form1">
+          <select name="sing1">
+            <option value="pontuacao01">Selecione</option>
+            <option value="conInt01">+3</option>
+            <option value="concordo01">+2</option>
+            <option value="conParc01">+1</option>
+             <option value="duvida01">0</option>
+             <option value="disParc01">-1</option>
+             <option value="discordo01">-2</option>
+             <option value="disInt01">-3</option>
+          </select>
+          <br><br>
+        </form>
+    </div>
+
+    <button class="accordion">Questão 2</button>
+    <div class="panel">
+      <p>Ter uma melhor descrição dos cargos?</p>
+       <form name="form2">
+           <select name="sing2">
+            <option value="pontuacao02">Selecione</option>
+            <option value="conInt02">+3 </option>
+            <option value="concordo02">+2</option>
+            <option value="conParc02">+1</option>
+             <option value="duvida02">0</option>
+             <option value="disParc02">-1</option>
+             <option value="discordo02">-2</option>
+             <option value="disInt02">-3</option>
+          </select>
+          <br><br>
+        </form>
+    </div>
+
+    <button class="accordion">Questão 3</button>
+    <div class="panel">
+      <p>Seu emprego depende da capacidade de competição da empresa no mercado?</p>
+       <form name="form3">
+         <select name="sing3">
+            <option value="pontuacao03">Selecione</option>
+            <option value="conInt03">+3 </option>
+            <option value="concordo03">+2</option>
+            <option value="conParc03">+1</option>
+             <option value="duvida03">0</option>
+             <option value="disParc03">-1</option>
+             <option value="discordo03">-2</option>
+             <option value="disInt03">-3</option>
+          </select>
+          <br><br>
+        </form>
+    </div>
+
+    <button class="accordion">Questão 4</button>
+    <div class="panel">
+      <p>A chefia tem que dá muita importância as condições físicas de trabalho dos empregados?</p>
+       <form name="form4">
+         <select name="sing4">
+            <option value="pontuacao04">Selecione</option>
+            <option value="conInt04">+3 </option>
+            <option value="concordo04">+2</option>
+            <option value="conParc04">+1</option>
+             <option value="duvida04">0</option>
+             <option value="disParc04">-1</option>
+             <option value="discordo04">-2</option>
+             <option value="disInt04">-3</option>
+          </select>
+          <br><br>
+        </form>
+    </div>
+
+    <button class="accordion">Questão 5</button>
+    <div class="panel">
+      <p>Ter um clima de trabalho amistoso?</p>
+       <form name="form5">
+         <select name="sing5">
+            <option value="pontuacao05">Selecione</option>
+            <option value="conInt05">+3 </option>
+            <option value="concordo05">+2</option>
+            <option value="conParc05">+1</option>
+             <option value="duvida05">0</option>
+             <option value="disParc05">-1</option>
+             <option value="discordo05">-2</option>
+             <option value="disInt05">-3</option>
+          </select>
+          <br><br>
+        </form>
+    </div>
+
+    <button class="accordion">Questão 6</button>
+    <div class="panel">
+      <p>É importante ter um reconhecimento indivual?</p>
+       <form name="form6">
+         <select name="sing6">
+            <option value="pontuacao06">Selecione</option>
+            <option value="conInt06">+3 </option>
+            <option value="concordo06">+2</option>
+            <option value="conParc06">+1</option>
+             <option value="duvida06">0</option>
+             <option value="disParc06">-1</option>
+             <option value="discordo06">-2</option>
+             <option value="disInt06">-3</option>
+          </select>
+          <br><br>
+        </form>
+    </div>
+
+    <button class="accordion">Questão 7</button>
+    <div class="panel">
+      <p>A chefia indiferente pode inferiorizar os sentimentos do empregado?</p>
+       <form name="form7">
+         <select name="sing7">
+            <option value="pontuacao07">Selecione</option>
+            <option value="conInt07">+3 </option>
+            <option value="concordo07">+2</option>
+            <option value="conParc07">+1</option>
+             <option value="duvida07">0</option>
+             <option value="disParc07">-1</option>
+             <option value="discordo07">-2</option>
+             <option value="disInt07">-3</option>
+          </select>
+          <br><br>
+        </form>
+    </div>
+
+    <button class="accordion">Questão 8</button>
+    <div class="panel">
+      <p>Ter seus conhecimentos valorizados no trabalho?</p>
+       <form name="form8">
+         <select name="sing8">
+            <option value="pontuacao08">Selecione</option>
+            <option value="conInt08">+3 </option>
+            <option value="concordo08">+2</option>
+            <option value="conParc08">+1</option>
+             <option value="duvida08">0</option>
+             <option value="disParc08">-1</option>
+             <option value="discordo08">-2</option>
+             <option value="disInt08">-3</option>
+          </select>
+          <br><br>
+        </form>
+    </div>
+
+    <button class="accordion">Questão 9</button>
+    <div class="panel">
+      <p>É importante ter um bom plano de aposentadoria e benefícios para continuar na empresa?</p>
+       <form name="form9">
+         <select name="sing9">
+            <option value="pontuacao09">Selecione</option>
+            <option value="conInt09">+3 </option>
+            <option value="concordo09">+2</option>
+            <option value="conParc09">+1</option>
+             <option value="duvida09">0</option>
+             <option value="disParc09">-1</option>
+             <option value="discordo09">-2</option>
+             <option value="disInt09">-3</option>
+          </select>
+          <br><br>
+        </form>
+    </div>
+
+    <button class="accordion">Questão 10</button>
+    <div class="panel">
+      <p>Pode-se tornar quase todo tipo de trabalho mais estimulante e desafiante?</p>
+       <form name="form10">
+         <select name="sing10">
+            <option value="pontuacao10">Selecione</option>
+            <option value="conInt10">+3 </option>
+            <option value="concordo10">+2</option>
+            <option value="conParc10">+1</option>
+             <option value="duvida10">0</option>
+             <option value="disParc10">-1</option>
+             <option value="discordo10">-2</option>
+             <option value="disInt10">-3</option>
+          </select>
+          <br><br>
+        </form>
+    </div>
+
+    <button class="accordion">Questão 11</button>
+    <div class="panel">
+      <p>Muitos empregados desejam dá o máximo de si em tudo o que fazem?</p>
+       <form name="form11">
+         <select name="sing11">
+            <option value="pontuacao11">Selecione</option>
+            <option value="conInt11">+3 </option>
+            <option value="concordo11">+2</option>
+            <option value="conParc11">+1</option>
+             <option value="duvida11">0</option>
+             <option value="disParc11">-1</option>
+             <option value="discordo11">-2</option>
+             <option value="disInt11">-3</option>
+          </select>
+          <br><br>
+        </form>
+    </div>
+
+    <button class="accordion">Questão 12</button>
+    <div class="panel">
+      <p>É importante a empresa mostrar maior interesse pelos empregados como, por exemplo, patrociona-lo em eventos sociais fora do expediente de trabalho?</p>
+       <form name="form12">
+         <select name="sing12">
+            <option value="pontuacao12">Selecione</option>
+            <option value="conInt12">+3 </option>
+            <option value="concordo12">+2</option>
+            <option value="conParc12">+1</option>
+             <option value="duvida12">0</option>
+             <option value="disParc12">-1</option>
+             <option value="discordo12">-2</option>
+             <option value="disInt12">-3</option>
+          </select>
+          <br><br>
+        </form>
+    </div>
+
+    <button class="accordion">Questão 13</button>
+    <div class="panel">
+      <p>Para você orgulha-se pelo emprego já é considerado uma recompença?</p>
+       <form name="form13">
+         <select name="sing13">
+            <option value="pontuacao13">Selecione</option>
+            <option value="conInt13">+3 </option>
+            <option value="concordo13">+2</option>
+            <option value="conParc13">+1</option>
+             <option value="duvida13">0</option>
+             <option value="disParc13">-1</option>
+             <option value="discordo13">-2</option>
+             <option value="disInt13">-3</option>
+          </select>
+          <br><br>
+        </form>
+    </div>
+
+    <button class="accordion">Questão 14</button>
+    <div class="panel">
+      <p>Gostaria de se julgar o melhor no trabalho que realiza?</p>
+       <form name="form14">
+         <select name="sing14">
+            <option value="pontuacao14">Selecione</option>
+            <option value="conInt14">+3 </option>
+            <option value="concordo14">+2</option>
+            <option value="conParc14">+1</option>
+             <option value="duvida14">0</option>
+             <option value="disParc14">-1</option>
+             <option value="discordo14">-2</option>
+             <option value="disInt14">-3</option>
+          </select>
+          <br><br>
+        </form>
+    </div>
+
+    <button class="accordion">Questão 15</button>
+    <div class="panel">
+      <p>É importante ter um bom relacionamento entre grupos informais no trabalho ?</p>
+       <form name="form15">
+         <select name="sing15">
+            <option value="pontuacao15">Selecione</option>
+            <option value="conInt15">+3 </option>
+            <option value="concordo15">+2</option>
+            <option value="conParc15">+1</option>
+             <option value="duvida15">0</option>
+             <option value="disParc15">-1</option>
+             <option value="discordo15">-2</option>
+             <option value="disInt15">-3</option>
+          </select>
+          <br><br>
+        </form>
+    </div>
+
+    <button class="accordion">Questão 16</button>
+    <div class="panel">
+      <p>Melhoraria seu desempenho no trabalho se houvesse premiações individuais?</p>
+       <form name="form16">
+         <select name="sing16">
+            <option value="pontuacao16">Selecione</option>
+            <option value="conInt16">+3 </option>
+            <option value="concordo16">+2</option>
+            <option value="conParc16">+1</option>
+             <option value="duvida16">0</option>
+             <option value="disParc16">-1</option>
+             <option value="discordo16">-2</option>
+             <option value="disInt16">-3</option>
+          </select>
+          <br><br>
+        </form>
+    </div>
+
+    <button class="accordion">Questão 17</button>
+    <div class="panel">
+      <p>Para você é importante ser notado pela alta gerência da empresa?</p>
+       <form name="form17">
+         <select name="sing17">
+            <option value="pontuacao17">Selecione</option>
+            <option value="conInt17">+3 </option>
+            <option value="concordo17">+2</option>
+            <option value="conParc17">+1</option>
+             <option value="duvida17">0</option>
+             <option value="disParc17">-1</option>
+             <option value="discordo17">-2</option>
+             <option value="disInt17">-3</option>
+          </select>
+          <br><br>
+        </form>
+    </div>
+
+    <button class="accordion">Questão 18</button>
+    <div class="panel">
+      <p>Gostaria de tomar suas próprias decisões, em relação ao trabalho, com o mínimo de supervisão?</p>
+       <form name="form18">
+         <select name="sing18">
+            <option value="pontuacao18">Selecione</option>
+            <option value="conInt18">+3 </option>
+            <option value="concordo18">+2</option>
+            <option value="conParc18">+1</option>
+             <option value="duvida18">0</option>
+             <option value="disParc18">-1</option>
+             <option value="discordo18">-2</option>
+             <option value="disInt18">-3</option>
+          </select>
+          <br><br>
+        </form>
+    </div>
+
+    <button class="accordion">Questão 19</button>
+    <div class="panel">
+      <p>Para você é importante ser notado pela alta gerência da empresa?</p>
+       <form name="form19">
+         <select name="sing19">
+            <option value="pontuacao19">Selecione</option>
+            <option value="conInt19">+3 </option>
+            <option value="concordo19">+2</option>
+            <option value="conParc19">+1</option>
+             <option value="duvida19">0</option>
+             <option value="disParc19">-1</option>
+             <option value="discordo19">-2</option>
+             <option value="disInt19">-3</option>
+          </select>
+          <br><br>
+        </form>
+    </div>
+
+    <button class="accordion">Questão 20</button>
+    <div class="panel">
+      <p>É importante ter bons equipamentos de trabalho?</p>
+       <form name="form20">
+         <select name="sing20">
+            <option value="pontuacao20">Selecione</option>
+            <option value="conInt20">+3 </option>
+            <option value="concordo20">+2</option>
+            <option value="conParc20">+1</option>
+             <option value="duvida20">0</option>
+             <option value="disParc20">-1</option>
+             <option value="discordo20">-2</option>
+             <option value="disInt20">-3</option>
+          </select>
+          <br><br>
+        </form>
+    </div>
+    <center>
+            <form>
+                <input  class="btn  btn-primary " type="button" value="Enviar" onclick="calcular()">
+                
+            </form>
+    </center>
+        
+    <div id="top_x_div" style="width: 600px; height: 600px;"></div>
+    <center>   
+    <a href="analiseGrafica.html"><button class="btn  btn-primary " >Verificar</button></a>
+    </center>     
+    <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight){
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        } 
+      });
+    }
+    </script>
+   </body>
+</html>

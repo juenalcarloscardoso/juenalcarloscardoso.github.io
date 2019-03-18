@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+       <title>Cadastro</title>
+       <meta name="viewport" content="width=device-width, initial-scale=1">
+       <meta charset="utf-8">
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+       <style>
+          body.corpo{
+            background: LightGray url(img/grafico.png);
+           background-repeat: no-repeat;
+           background-attachment: fixed;
+           background-position: bottom right;
+           background-size: 300px 300px;
+           
+           }
+           h3.cabecalho{
+               color: darkcyan;
+               text-align:center;
+           }
+           h4.segundoCabecalho{
+               color: darkcyan;
+               text-align: center;
+           }
+           
+       </style>         
+       
+  </head>
+  <body class="corpo">
+      
+      <!--MENU-->
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+       <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span> 
+        </button>
+           <!-- INSERI LOGO -->
+        <a class="navbar-brand" href="index.html">Início</a>
+       </div>
+       <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+             <li><a href="Gerenciamento.html">Sobre</a></li>
+          </ul>
+         <ul class="nav navbar-nav navbar-right">
+             <li><a href="#"><span class="glyphicon glyphicon-user"></span>Cadastra-se</a></li>
+             <li><a href="Entrar.html"><span class="glyphicon glyphicon-log-in"></span>Entrar</a></li>
+         </ul>
+       </div>
+     </div>
+    </nav>
+
+    <!--FORMULÁRIO-->
+       
+    <div class="container">
+        <h3 class="cabecalho">Cadastre-se para responder ao formulário</h3>
+        <hr/>
+        <form name="formuser" class="form-horizontal">
+          <div class="form-group">  
+              <label class="control-label col-sm-3" for="nome">Nome:</label>
+              <div class="col-sm-5">
+                  <input type="text" name="nome"  id="inputNome" placeholder="Informe seu nome"  class="form-control" required >
+              </div>
+          </div>
+          <div class="form-group">    
+              <label class="control-label col-sm-3" for="cargo">Cargo:</label>
+               <div class="col-sm-5">
+                 <input type="text" name="cargo"  id="inputCargo" placeholder="Informe seu cargo" class="form-control" required>
+               </div>
+          </div> 
+          <div class="form-group">    
+              <label class="control-label col-sm-3" for="idade">Idade:</label>
+              <div class="col-sm-5">
+                 <input type="number" name="idade"  id="inputIdade" class="form-control" required>
+              </div>
+          </div>      
+          <div class="form-group">    
+              <label class="control-label col-sm-3" for="dependentes">Dependentes:</label>
+              <div class="col-sm-5">
+                 <input type="number" name="dependentes"  id="inpuDependentes" class="form-control" required>
+              </div>
+          </div>    
+          <div class="form-group">    
+              <label class="control-label col-sm-3" for="email">Email:</label>
+              <div class="col-sm-5">
+                 <input type="text" name="email"  id="inputEmail" placeholder="Informe seu email" class="form-control" required>
+              </div>
+          </div>      
+              <h4 class="segundoCabecalho">Informe o nome e a senha que deseja usar na aplicação</h4>
+          <div class="form-group">    
+              <label class="control-label col-sm-3" for="login">Nome:</label>
+               <div class="col-sm-5">
+                 <input type="text" name="login"  placeholder="Informe o nome que deseja usar" class="form-control" required>
+              </div>
+          </div>      
+          <div class="form-group">    
+              <label class="control-label col-sm-3" for="senha">Senha:</label>
+              <div class="col-sm-5">
+                 <input type="password" name="senha"  placeholder="**********" class="form-control" required>
+              </div>
+          </div> 
+          <div class="form-group">    
+              <label class="control-label col-sm-3" for="confirSenha">Confirme a senha:</label>
+              <div class="col-sm-5">
+                 <input type="password" name="confirmacao"  placeholder="**********" class="form-control" required>
+              </div>
+         </div>
+            <center>
+                <input class="btn  btn-primary " type="submit" onclick="validar()"/>
+            </center>
+        </form>
+    </div>     
+    
+    
+    <script src="Cadastro.js"></script>
+   </body>
+</html>
